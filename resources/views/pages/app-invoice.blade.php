@@ -94,7 +94,7 @@
               <tbody>
                 <tr>
                   <td>Frest Admin</td>
-                  <td>HTML Admin Template</td>
+                  <td>InnoutProperty</td>
                   <td>28</td>
                   <td>1</td>
                   <td class="text-primary text-right font-weight-bold">$28.00</td>

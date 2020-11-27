@@ -90,7 +90,7 @@
                       <div class="invoice-item-filed row pt-1 px-1">
                         <div class="col-12 col-md-4 form-group">
                           <select class="form-control invoice-item-select">
-                            <option value="Frest Admin Template">Frest Admin Template</option>
+                            <option value="Frest Admin Template">InnoutProperty</option>
                             <option value="Stack Admin Template">Stack Admin Template</option>
                             <option value="Robust Admin Template">Robust Admin Template</option>
                             <option value="Apex Admin Template">Apex Admin Template</option>
