@@ -171,18 +171,79 @@
                 <div class="card-content">
                   <div class="card-body py-1">
                     {{-- <p class="text-bold-500">Greetings!</p> --}}
-                    <p>
-                      Country: {{$userRequest->requests->country}}
-                    </p>
-                    <p>
-                      About Project: {{$userRequest->requests->about_project}}
-                    </p>
-                    <p>
-                      Have Land: {{$userRequest->requests->have_land}}
-                    </p>
-                    <p>
-                      Status: {{$userRequest->status}}
-                    </p>
+                    @if ($userRequest->request_type == "Rent" || $userRequest->request_type == "Buy")
+                      <p>
+                        State Of Residence: {{$userRequest->requests->state_of_residence}}
+                      </p>
+                      <p>
+                        State Of Interest: {{$userRequest->requests->state_of_interest}}
+                      </p>
+                      <p>
+                        Area Of Interest: {{$userRequest->requests->area_of_interest}}
+                      </p>
+                      <p>
+                        Duration: {{$userRequest->requests->duration}}
+                      </p>
+                      <p>
+                        Property Type: {{$userRequest->requests->property_type}}
+                      </p>
+                      <p>
+                        Budget: {{$userRequest->requests->budget}}
+                      </p>
+                      <p>
+                        Comment: {{$userRequest->requests->comment}}
+                      </p>
+                      <p>
+                        Deposit: {{$userRequest->requests->deposit}}
+                      </p>
+                      <p>
+                        Status: {{$userRequest->status}}
+                      </p>
+                    @endif
+
+                    @if ($userRequest->request_type == "Construction")
+                      <p>
+                        Country: {{$userRequest->requests->country}}
+                      </p>
+                      <p>
+                        About Project: {{$userRequest->requests->about_project}}
+                      </p>
+                      <p>
+                        Have Land: {{$userRequest->requests->have_land}}
+                      </p>
+                      <p>
+                        Status: {{$userRequest->status}}
+                      </p>
+                    @endif
+
+                    @if ($userRequest->request_type == "Rental" || 
+                        $userRequest->request_type == "Sales" || 
+                        $userRequest->request_type == "Distress Sales")
+                      <p>
+                        Role: I am {{$userRequest->requests->role}}
+                      </p>
+                      <p>
+                        Location: {{$userRequest->requests->location}}
+                      </p>
+                      <p>
+                        Facilities: {{$userRequest->requests->facilities}}
+                      </p>
+                      <p>
+                        Property Type: {{$userRequest->requests->property_type}}
+                      </p>
+                      <p>
+                        Duration: {{$userRequest->requests->duration}}
+                      </p>
+                      <p>
+                        Price: {{$userRequest->requests->price}}
+                      </p>
+                      <p>
+                        Comment: {{$userRequest->requests->comment}}
+                      </p>
+                      <p>
+                        Status: {{$userRequest->status}}
+                      </p>
+                    @endif
                     <p class="mb-0">Date:</p>
                     <p class="text-bold-500">{{$userRequest->created_at}}</p>
                   </div>
