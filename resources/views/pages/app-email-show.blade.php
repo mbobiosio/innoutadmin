@@ -171,6 +171,15 @@
                 <div class="card-content">
                   <div class="card-body py-1">
                     {{-- <p class="text-bold-500">Greetings!</p> --}}
+                    <p>
+                      Fullname: {{$userRequest->user->name}} {{$userRequest->user->last_name}}
+                    </p>
+                    <p>
+                      Phone: {{$userRequest->user->phone_number}} 
+                    </p>
+                    <p>
+                      Email: {{$userRequest->user->email}} 
+                    </p>
                     @if ($userRequest->request_type == "Rent" || $userRequest->request_type == "Buy")
                       <p>
                         State Of Residence: {{$userRequest->requests->state_of_residence}}
